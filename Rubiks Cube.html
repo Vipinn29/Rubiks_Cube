@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        .cube {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            position: relative;
+            top: 37vh;
+            left: 39vw;
+            transform: rotate3d(1, 1, 0, 45deg);
+            transform-style: preserve-3d;
+
+        }
+
+        .top {
+            transform: translateY(-100px) rotateX(-90deg);
+        }
+
+        .bottom {
+            transform: translateY(100px) rotateX(270deg);
+        }
+
+        .left {
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+
+        .right {
+            transform: translatex(100px) rotateY(-90deg);
+        }
+
+        .left {
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+
+        .front {
+            transform: translateZ(100px);
+        }
+
+        .back {
+            transform: translateZ(-100px);
+        }
+
+        .box1 {
+            background-color: red;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .box2 {
+            background-color: orangered;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .box3 {
+            background-color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .box4 {
+            background-color: blue;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .box5 {
+            background-color: green;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .box6 {
+            background-color: yellow;
+            width: 62px;
+            height: 62px;
+            border-radius: 4px;
+        }
+
+        .face {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            /* opacity: 50%; */
+            background-color: black;
+
+            /* for rubik's */
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 4px 4px;
+        }
+
+        @keyframes turn {
+            0% {
+                transform: rotate3d(1, 1, 0, 45deg);
+            }
+
+            20% {
+                transform: rotate3d(0, -2, 0, 120deg);
+            }
+
+            40% {
+                transform: rotate3d(-2, -3, 2, 160deg);
+            }
+
+            60% {
+                transform: rotate3d(-3, 2, -2, 220deg);
+            }
+
+            75% {
+                transform: rotate3d(2, 2, -2, 290deg);
+            }
+
+            90% {
+                transform: rotate3d(0, 1, 1, 330deg);
+            }
+
+            100% {
+                transform: rotate3d(1, 1, 0, 45deg);
+            }
+
+        }
+
+        .cube:hover {
+            animation: turn 8s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="face top">
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+            </div>
+            <div class="face bottom">
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+
+            </div>
+            <div class="face front">
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+
+            </div>
+            <div class="face back">
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+                <div class="box4"></div>
+
+            </div>
+            <div class="face left">
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+                <div class="box5"></div>
+
+            </div>
+            <div class="face right">
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+                <div class="box6"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
