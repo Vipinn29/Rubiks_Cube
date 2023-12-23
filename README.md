@@ -1,2 +1,2 @@
-# Simple_Cube
- A simple 3D cube having name( like top, left , right ) on each face using Html and CSS.
+# Rubik's_Cube
+Rubik's Cube, A cube covered by nine stickers, each of one of six solid colours: white, red, blue, orange, green, and yellow.
